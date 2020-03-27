@@ -450,58 +450,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-     <script>
-        
-            $("#mycarousel").carousel( { interval: 1000 } );
-             $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');                    
-                }
-            });
-            
-        <!-- Triggering Reserve a Table Modal --> 
-            $("#b1").click(function(){
-                $("#booktable").modal('show');
-                
-            });
-            
-            <!-- Triggering Login modal -->
-            
-            $("#b2").click(function(){
-                $("#loginModal").modal('show');
-            });
-            
-        });
-         
-    </script>
-    <script>
-    $("#cancel1").click(function(){
-                $("#loginModal").modal('toggle');
-            });
-            
-            $("#cancel11").click(function(){
-                $("#loginModal").modal('toggle');
-            });
-    </script>
-    
-    
-    <script>
-     $("#cancel2").click(function(){
-                $("#booktable").modal('toggle');
-            });
-            
-            $("#cancel21").click(function(){
-                $("#booktable").modal('toggle');
-            });
-    
-    </script>
+     <script src="scripts/scripts.js"></script>
 </body>
 
 </html>
