@@ -28,13 +28,14 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-lg fa-list"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card"></span> Contact</a></li>
                 </ul> 
-                    <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
-                    <span class="fa fa-sign-in"></span> Login</a>
+                    <span  class="navbar-text">
+                    <a id="b2">
+                    <span class="fa fa-sign-in"></span>Login</a>
                 </span>
             </div>
         </div>
     </nav>
+    
     
      <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
@@ -42,7 +43,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login </h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" id="cancel11"> &times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -64,7 +65,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" id="cancel1">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                         </div>
                     </form>
@@ -76,12 +77,12 @@
     
     
          <div id="booktable" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="form">
+        <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table </h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" id="cancel21">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -183,7 +184,7 @@
                         
                         <div class="form-group row">
                             <div class="col-12 offset-2">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" id="cancel2">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Reserve</button>        
                         </div>
                     </div>
@@ -206,7 +207,7 @@
                 </div>
                 <div class="col-12 col-md-3 offset-1 align-self-center order-sm-last">
                     
-                    <button type="button" class="btn btn-block btn-lg btn-warning" data-toggle="modal" data-target="#booktable">
+                    <button type="button" id="b1" class="btn btn-block btn-lg btn-warning" >
                     Reserve a Table
                     </button>
                 </div>
@@ -450,7 +451,7 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
      <script>
-        $(document).ready(function(){
+        
             $("#mycarousel").carousel( { interval: 1000 } );
              $("#carouselButton").click(function(){
                 if ($("#carouselButton").children("span").hasClass('fa-pause')) {
@@ -464,7 +465,42 @@
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
             });
+            
+        <!-- Triggering Reserve a Table Modal --> 
+            $("#b1").click(function(){
+                $("#booktable").modal('show');
+                
+            });
+            
+            <!-- Triggering Login modal -->
+            
+            $("#b2").click(function(){
+                $("#loginModal").modal('show');
+            });
+            
         });
+         
+    </script>
+    <script>
+    $("#cancel1").click(function(){
+                $("#loginModal").modal('toggle');
+            });
+            
+            $("#cancel11").click(function(){
+                $("#loginModal").modal('toggle');
+            });
+    </script>
+    
+    
+    <script>
+     $("#cancel2").click(function(){
+                $("#booktable").modal('toggle');
+            });
+            
+            $("#cancel21").click(function(){
+                $("#booktable").modal('toggle');
+            });
+    
     </script>
 </body>
 
